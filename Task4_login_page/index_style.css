@@ -123,10 +123,6 @@ select{
     font-weight: bold;
 }
 
-.district {
-    margin-left: 32px;
-}
-
 .select select{
     appearance: none;
     background-image: url(icons/arrow-down.svg);
