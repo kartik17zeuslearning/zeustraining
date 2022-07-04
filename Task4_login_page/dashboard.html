@@ -10,33 +10,71 @@
 </head>
 <body>
     <div class="main-container">
-        <!-- Header of Page--------------------------------- -->
         <header class="header">
-            <img class="header-logo" src="icons/logo used in header.svg" alt="Quantum logo">
+            <nav>
+                <!-- <input type="checkbox" id="check"> -->
+                <label for="check" class="checkbtn">
+                     <li><img src="icons/alerts.svg" alt="" style="width:24px; height:24px;"></li>
+                    <li><img src="icons/announcements.svg" alt=""  style="width:24px; height:24px;"></li>
+                    <li><img src="icons/user-icon.png" alt="" style="width:32px; height:32px;"></li>
+                    <img src="icons/hamburger-menu.svg" alt="" style="width:32px; height:32px;">
+                   
+                    <!-- <i class="fas fa-bars"></i> -->
+                </label>
+                <img class="logo" src="icons/logo used in header.svg" alt="Quantum logo">
+                <ul>
+                    <li><a class="active" href="index.html">DASHBOARD</a></li>
+                    <li><a href="about.html">CONTENT</a></li>
+
+                    <li><a href="about.html">USERS</a></li>
+
+                    <li><a href="about.html">REPORTS</a></li>
+                    <li><a href="about.html">ADMIN</a></li>
+
+                    <li><img src="icons/alerts.svg" alt="" style="margin: -6px 0"></li>
+                    <li><img src="icons/announcements.svg" alt="" style="margin: -3px 0"></li>
+                    <li><img src="icons/user-icon.png" alt="" style="width: 32px; height:32px; margin: -8px 0"></li>
+
+                   
+                    <!-- <li><img src="images/logo.png" class="logoDesign" alt=""></li> -->
+                </ul>
+            </nav>
         </header>
 
         <div class="sub-container">
             <!-- Sub-Nav------------------------------------------ -->
             <div class="sub-nav">
-                <nav>
-                    <ul>
-                        <li><img src="icons/courses.svg" alt="Courses logo"></li>
-                        <li><img src="icons/classes.svg" alt="Classes logo"></li>
-                    </ul>
-                </nav>
+                <div class="column" id="bottom-border">
+                    <img class="iconimg" src="icons/courses.svg" alt="">
+                    <div class="text-div">
+                    <span style="font-weight:bold; font-size:24px;">4</span> courses
+                    </div>
+                </div>
+                <div class="column">
+                    <img class="iconimg" src="icons/classes.svg" alt="">
+                    <div class="text-div">
+                        <span style="font-weight:bold; font-size:24px;">4</span> classes
+                    </div>
+                  </div>
             </div>
+
+            <!-- Sorting Bar--------------------------- -->
             <div class="sorting-bar">
                 <h6>
                     Showing 4 of 4 courses
                 </h6>
-                <div class="select select-state">
-                    <label for="sort by">Sort By:</label>
-                    <select name="sortby" id="sortby">
-                        <option class="text1" value="course name">Course Name</option>
-                    </select>
-                </div>
+                
+            </div>
+            <span><div class="select select-state">
+                <img class="sort-icon" src="icons/sort.svg" alt="">
+                
+                <select name="sortby" id="sortby">
+                    <option class="text1" value="course name">Course Name</option>
+                </select>
+                <label for="sort by">Sort By:</label>
             </div>
 
+            <!-- Course cards------------------------------------ -->
             <div class="course-cards">
                 <div class="card" id="card-1">
                     <img class="card-image" src="images/imageMask-1.svg" alt="acceleration">
@@ -115,7 +153,7 @@
                     </div>
 
                     <select name="clasess" id="classes">
-                        <option class="text2" value="No Classes" style="color: #808080; opacity: 0.4;">No Classes</option>
+                        <option value="No Classes"><span class="card-option">No Classes</span></option>
                     </select>
 
                     <div class="card-bottom-bar">
