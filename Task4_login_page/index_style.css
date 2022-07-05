@@ -12,21 +12,21 @@ body {
   padding: 0;
   background: #eeeeee 0% 0% no-repeat padding-box;
   height: 100vh;
-  /* overflow: visible; */
 }
 .main-container {
   display: block;
   width: 100%;
-  /* height: 100vh; */
   min-height: calc(100vh - 56px - 56px - 18px);
   padding: 24px;
 }
-.header{
-    background: url("images/header\ pattern\ image.png"),
+
+/* Header of the page------------------- */
+.header {
+  background: url("images/header\ pattern\ image.png"),
     url("images/header\ pattern\ svg.svg");
 }
 .header nav {
-  background: rgb(37, 49, 63, .8);
+  background: rgb(37, 49, 63, 0.8);
   width: 100%;
   height: 56px;
   top: 0;
@@ -39,7 +39,9 @@ body {
   cursor: pointer;
 }
 
+/* Login Box------------------------- */
 .login-box {
+  position: relative;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -49,45 +51,96 @@ body {
   border: 1px solid #ffffff;
   border-top: 4px solid #3ac7ec;
 }
-.login-box h1 {
+
+/* Login Box Title -------------------- */
+.login-box .login-title{
   font-size: 24px;
-  text-align: center;
-  margin-top: 20px;
+  font-weight: bold;
+  margin-top: 16px;
 }
-.login-box .backbtn {
-  position: absolute;
-  top: 132px;
+.login-title .title{
+  text-align: center;
+}
+.login-title .backbtn{
   margin-left: 32px;
+  padding-top: 2px;
+  position: absolute;
+  cursor: pointer;
 }
 
+/* Login form ---------------------------- */
 .login-box form {
   padding: 0 32px;
   box-sizing: border-box;
 }
-.login-box .radiobtn {
-  position: absolute;
-  top: 190px;
-}
-.login-box .radiovalue {
-  margin-top: 32px;
-  margin-left: 28px;
+
+/* Radio Button ----------------------------- */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 32px 32px 23px 0;
+  cursor: pointer;
   font-size: 16px;
-  color: #333333;
   font-weight: bold;
+  float: left;
 }
-.login-box .radiobtn2 {
+/* .radio-container p{
+ margin-top: 3px;
+} */
+
+/* Hide the browser's default radio button */
+.radio-container input {
   position: absolute;
-  top: 190px;
-  margin-left: 113px;
+  opacity: 0;
+  cursor: pointer;
 }
-.login-box .radiovalue2 {
-  top: 192px;
-  margin-left: 141px;
+
+/* Create a custom radio button */
+.radio-checkmark {
   position: absolute;
-  font-size: 16px;
-  color: #333333;
-  font-weight: bold;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid #1F7A54;
+  border-radius: 50%;
 }
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+ 	top: 2px;
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #1F7A54;
+}
+
+/* Dropdown Menu for State and Distric------------- */
 
 .select-state {
   display: flex;
@@ -197,14 +250,72 @@ form .password {
   text-decoration: underline;
 }
 
-.login-box .checkbox {
-  position: absolute;
-  margin-top: 20px;
+/* Remember Me checkbox------------------------- */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 23px;
+  margin: 24px 0 18px 0;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  font-weight: bold;
+  color: #222222;
 }
 
-.login-box .remembertxt {
-  margin-top: 22px;
-  margin-left: 30px;
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 18px;
+  border-radius: 2px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #1F7A54;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 button {
@@ -212,7 +323,7 @@ button {
   margin: 34px auto 24px auto;
   background-color: #3fd28b;
   height: 40px;
-  width: 216px;
+  width: 44%;
   border: none;
   border-radius: 2px;
   box-shadow: 0px 3px 5px #0000003d;
@@ -252,7 +363,6 @@ button {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  /* position: fixed; */
   bottom: 0;
   color: #616161;
 }
@@ -262,11 +372,17 @@ button {
 }
 .zeus {
   font-weight: bold;
-  font: normal normal bold 12px/16px "Quicksand";
 }
 
 @media screen and (max-width: 480px) {
+  .main-container{
+    width: 100%;
+  }
   .header {
-    width: 480px;
+    width: 100%;
+  }
+  .login-box{
+    width: 100%;
   }
 }
+

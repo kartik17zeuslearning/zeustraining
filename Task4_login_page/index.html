@@ -22,24 +22,24 @@
     <div class="main-container">
       <!-- Login box-------------------------------------- -->
       <div class="login-box">
-        <img class="backbtn" src="icons/back.svg" alt="Back button" />
-        <h1>Log in with Quantum</h1>
+        <!-- Login-title---------------------------------------- -->
+        <div class="login-title">
+          <img class="backbtn" src="icons/back.svg" alt="Back button" />
+          <p class="title">Log in with Quantum</p>
+        </div>
 
         <!-- Form-------------------------------------- -->
         <form action="dashboard.html">
           <!-- Radio button--------------------------- -->
-          <img
-            class="radiobtn"
-            src="icons/radio-button-on.svg"
-            alt="Radio Button District"
-          />
-          <p class="radiovalue">District</p>
-          <img
-            class="radiobtn2"
-            src="icons/radio-button-off.svg"
-            alt="Radio Button"
-          />
-          <p class="radiovalue2">Independent School</p>
+          <label class="radio-container"><p>District</p>
+            <input type="radio" checked="checked" value="District" name="radio">
+            <span class="radio-checkmark"></span>
+          </label>
+
+          <label class="radio-container"><p>Independant School</p>
+            <input type="radio" value="Independant School" name="radio">
+            <span class="radio-checkmark"></span>
+          </label>
 
           <!-- Dropdown------------------------------- -->
 
@@ -74,12 +74,12 @@
           </div>
           <div class="forgot">FORGOT PASSWORD?</div>
 
-          <img
-            class="checkbox"
-            src="icons/checkbox-checked.svg"
-            alt="checkbox checked"
-          />
-          <p class="remembertxt">Remember Me</p>
+          <!-- Remember Me checkbox---------------------- -->
+          <label class="checkbox-container"
+            >Remember Me
+            <input type="checkbox" checked="checked" />
+            <span class="checkmark"></span>
+          </label>
 
           <!-- Log in button---------------------------- -->
           <button type="submit">LOG IN</button>
