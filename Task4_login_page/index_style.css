@@ -188,6 +188,7 @@ select {
   background-position: right;
 }
 
+/* Username and .password-------------------------- */
 form .txt_field {
   position: relative;
   border-bottom: 1px solid #d0c8c8;
@@ -263,7 +264,6 @@ form .password {
   color: #222222;
 }
 
-/* Hide the browser's default checkbox */
 .checkbox-container input {
   position: absolute;
   opacity: 0;
@@ -272,7 +272,6 @@ form .password {
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -283,29 +282,24 @@ form .password {
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {
   background-color: #1F7A54;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .checkbox-container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
   left: 5px;
   top: 2px;
@@ -318,6 +312,7 @@ form .password {
   transform: rotate(45deg);
 }
 
+/* Log in button--------------------------- */
 button {
   display: block;
   margin: 34px auto 24px auto;
@@ -333,6 +328,7 @@ button {
   cursor: pointer;
 }
 
+/* Footer --------------------- */
 .about-contact-div {
   display: flex;
   justify-content: center;
