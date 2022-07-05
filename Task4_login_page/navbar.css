@@ -14,10 +14,10 @@
   }
   nav{
    
-    background-image:  url("images/header\ pattern\ image.png") 0% 0% ;
+    background-image:  url("images/header\ pattern\ image.png"),
+    url("images/header\ pattern\ svg.svg");
     background-color: #25313F;
     height: 56px;
-    /* 70px */
     width: 100%;
     /* border-bottom: 2px solid #c1c1c1; */
    
