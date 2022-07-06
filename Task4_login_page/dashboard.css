@@ -138,21 +138,21 @@ padding-top: 8px;
 }
 .box-1{
     position: relative;
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 74.2%;
     margin-bottom: 14px;
 }
 .box-1 .subbox-1 {
-    position: absolute;
     height: 100%;
     width:31%;
+    margin-right: 16px;
 }
 
 .box-1 .subbox-2 {
-    position: absolute;
     height: 100%;
     width: 66%;
-    right: 0;
 }
 .subbox-2 .card-head{
     display: flex;
