@@ -54,16 +54,16 @@ body {
 
 /* Login Box Title -------------------- */
 .login-box .login-title{
-  font-size: 24px;
-  font-weight: bold;
+  position: relative;
   margin-top: 16px;
 }
 .login-title .title{
   text-align: center;
+  font-size: 24px;
 }
 .login-title .backbtn{
-  margin-left: 32px;
-  padding-top: 2px;
+  left: 32px;
+  top: 4px;
   position: absolute;
   cursor: pointer;
 }
@@ -85,17 +85,12 @@ body {
   font-weight: bold;
   float: left;
 }
-/* .radio-container p{
- margin-top: 3px;
-} */
-
 /* Hide the browser's default radio button */
 .radio-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-
 /* Create a custom radio button */
 .radio-checkmark {
   position: absolute;
@@ -107,29 +102,24 @@ body {
   border: 2px solid #1F7A54;
   border-radius: 50%;
 }
-
 /* On mouse-over, add a grey background color */
 .radio-container:hover input ~ .radio-checkmark {
   background-color: #ccc;
 }
-
 /* When the radio button is checked, add a blue background */
 .radio-container input:checked ~ .radio-checkmark {
   background-color: white;
 }
-
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .radio-checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
 /* Show the indicator (dot/circle) when checked */
 .radio-container input:checked ~ .radio-checkmark:after {
   display: block;
 }
-
 /* Style the indicator (dot/circle) */
 .radio-container .radio-checkmark:after {
  	top: 2px;
@@ -239,6 +229,8 @@ form .password {
 .txt_field input:valid ~ span::before {
   width: 100%;
 }
+
+/* Forgot button------------------ */
 .forgot {
   font-size: 14px;
   margin-top: 5px;
@@ -328,7 +320,8 @@ button {
   cursor: pointer;
 }
 
-/* Footer --------------------- */
+
+/* About and Contact------------------------ */
 .about-contact-div {
   display: flex;
   justify-content: center;
@@ -350,6 +343,9 @@ button {
 .devider {
   color: #666666;
 }
+
+
+/* Footer --------------------- */
 
 .footer {
   background-color: #e0e1e1;

@@ -10,60 +10,46 @@
   }
   
   .header{
-    margin-bottom: 0;
+    background: url("images/header\ pattern\ image.png"),
+    url("images/header\ pattern\ svg.svg");
   }
   nav{
-   
-    background-image:  url("images/header\ pattern\ image.png"),
-    url("images/header\ pattern\ svg.svg");
-    background-color: #25313F;
+    background: rgb(37, 49, 63, 0.8);
     height: 56px;
     width: 100%;
-    /* border-bottom: 2px solid #c1c1c1; */
    
   }
   .logo{
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 30px;
     line-height: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
-    font-weight: bold;
   }
   
   nav ul{
     float: right;
-    /* margin-right: 32px; */
     height: 18px;
   }
   li{
     display: inline-block;
     line-height: 60px;
-    /* padding: 16px 0; */
     margin: 0 5px;
   }
   nav ul li{
     display: inline-block;
     line-height: 60px;
-    /* padding: 16px 0; */
     margin: 0 14px;
   }
   nav ul li a{
-    /* color: white; */
     color: #3FD28B;
     font-weight: 500;
     font-size: 17px;
     padding: 11.8px 13px;
-    /* border-radius: 3px; */
     text-transform: uppercase;
   }
   a.active,a:hover{
     color: white;
     border-bottom: 4px solid white;
-    /* background: #8a234f; */
     transition: .5s;
   }
   .checkbtn{
@@ -101,9 +87,6 @@
       font-size: 20px;
       padding: 10px 7px;  
       }
-    /* nav ul li a{
-      font-size: 16px;
-    } */
   }
   
   
@@ -134,7 +117,6 @@
       position: fixed;
       width: 100%;
       height: 100vh;
-  
       background: #232b2b;
       top: 56px;
       left: -100%;
@@ -164,6 +146,7 @@
   
   @media (max-width: 320px){
     .header{
+      position: relative;
       padding-bottom: 50px;
     }
     nav{
