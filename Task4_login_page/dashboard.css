@@ -126,32 +126,15 @@ padding-top: 8px;
     grid-template-rows: 246px 246px;
     /* grid-template-rows: auto auto; */
 }
-.course-cards #card-1{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 2px;
-    opacity: 1;
 
-}
-.course-cards #card-2{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 2px;
-    opacity: 1;
-}
-.course-cards #card-3{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 2px;
-    opacity: 1;
-}
-.course-cards #card-4{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 2px;
-    opacity: 1;
-}
 
 /* CSS for content in Cards--------------------------------------- */
 .card{
     position: relative;
     padding: 24px 24px 11px 24px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
 }
 .box-1{
     position: relative;
