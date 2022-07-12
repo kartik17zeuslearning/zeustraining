@@ -8,7 +8,6 @@
   box-sizing: border-box;
 }
 
-
 .header {
   background: url("images/header\ pattern\ image.png"),
     url("images/header\ pattern\ svg.svg");
@@ -79,9 +78,9 @@ nav {
 
 
 
-/* ----------------------HOVER MENU---------------------------- */
+/* ----------------------Hamburger HOVER MENU---------------------------- */
 
-.hover-menu{
+.hamburger .hover-menu{
   position: absolute;
   display: none;
   right: 0;
@@ -91,6 +90,7 @@ nav {
   line-height: 48px;
   box-shadow: 0px 13px 20px #0000003D;
   font-size: 14px;
+  font-weight: bold;
   color: #1F7A54;
   text-transform: uppercase;
   z-index: 1;
@@ -104,15 +104,19 @@ nav {
 .hover-menu div:hover{
   background-color: #F3F3F3;
 }
-.content ul{
+.hamburger .submenu-btn span{
+  float: right;
+  margin: 10px 24px 0 0;
+  cursor: pointer;
+}
+.dropdown-content{
+  margin-left: 16px;
   display: none;
 }
-.content ul li{
-  margin-left: 32px;
-}
-.content:hover ul{
+.show {
   display: block;
 }
+
 .hamburger:hover .hover-menu{
   display: block;
 }
@@ -168,7 +172,4 @@ nav {
     width: 50%;
   }
 }
-
-
-
 
