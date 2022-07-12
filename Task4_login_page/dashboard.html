@@ -10,70 +10,44 @@
   </head>
   <body>
     <div class="main-container">
+
       <header class="header">
         <nav>
-          <label for="check" class="checkbtn">
-            <li>
-              <img
-                src="icons/alerts.svg"
-                alt=""
-                style="width: 24px; height: 24px"
-              />
-            </li>
-            <li>
-              <img
-                src="icons/announcements.svg"
-                alt=""
-                style="width: 24px; height: 24px"
-              />
-            </li>
-            <li>
-              <img
-                src="icons/user-icon.png"
-                alt=""
-                style="width: 32px; height: 32px"
-              />
-            </li>
-            <img
-              src="icons/hamburger-menu.svg"
-              alt=""
-              style="width: 32px; height: 32px"
-            />
-          </label>
-          <img
-            class="logo"
-            src="icons/logo used in header.svg"
-            alt="Quantum logo"
-          />
-          <ul>
-            <li><a class="active" href="index.html">DASHBOARD</a></li>
-            <li><a href="#">CONTENT</a></li>
-
-            <li><a href="#">USERS</a></li>
-
-            <li><a href="#">REPORTS</a></li>
-            <li><a href="#">ADMIN</a></li>
-
-            <li>
-              <img src="icons/alerts.svg" alt="" style="margin: -6px 0" />
-            </li>
-            <li>
-              <img
-                src="icons/announcements.svg"
-                alt=""
-                style="margin: -3px 0"
-              />
-            </li>
-            <li>
-              <img
-                src="icons/user-icon.png"
-                alt=""
-                style="width: 32px; height: 32px; margin: -8px 0"
-              />
-            </li>
-
-            <!-- <li><img src="images/logo.png" class="logoDesign" alt=""></li> -->
-          </ul>
+          <div class="nav-container">
+              
+            <div class="header-logo">
+              <img src="icons/logo used in header.svg" alt="Quantum logo" />
+            </div>
+  
+            <div class="max-nav">
+              <a class="active" href="#">DASHBOARD</a>
+              <a href="#">CONTENT</a>
+              <a href="#">USERS</a>
+              <a href="#">REPORTS</a>
+              <a href="#">ADMIN</a>
+            </div>
+  
+            <div class="min-nav">
+              <img src="icons/alerts.svg" alt="alert icon" />
+              <img src="icons/announcements.svg" alt="announcement icon" />
+              <img src="icons/user-icon.png" alt="profile icon" />
+              <div class="hamburger">
+                <img src="icons/hamburger-menu.svg" alt="menu" />
+                <div class="hover-menu">
+                  <div><a href="#">Dashboard</a></div>
+                  <div class="content">Content<span></span>
+                      <ul>
+                        <li><a href="#">Course Catlog</a></li>
+                      </ul>
+                  </div>
+                  <div><a href="#">Users</a></div>
+                  <div><a href="#">Reports</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
         </nav>
       </header>
 
@@ -224,7 +198,7 @@
               </div>
               <div class="subbox-2">
                 <div class="card-head">
-                  <h3>Introduction to Biology: Micro organisms and how they affect the other Life Systems in En...</h3>
+                  <h3>Introduction to Biology: Micro organisms and how they affect...</h3>
                   <img class="fav-star" src="icons/favourite.svg" alt="favourite" />
                 </div>
 
