@@ -155,6 +155,7 @@ padding-top: 8px;
     width: 66%;
 }
 .subbox2 .cardHead{
+    /* overflow: hidden; */
     display: flex;
     flex-direction: row;
     align-items: flex-start;

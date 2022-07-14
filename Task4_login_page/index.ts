@@ -186,10 +186,27 @@ for(let i = 0; i<cardData.length;i++){
     // --------------Box 2-------------------
     const box2 = document.createElement('div')
     box2.classList.add('box2')
-    box2.innerHTML = `<img src="icons/preview.svg" alt="preview" />
-    <img src="icons/manage course.svg" alt="manage course" />
-    <img src="icons/grade submissions.svg" alt="" />
-    <img src="icons/reports.svg" alt="reports" />`
+
+    const previewIcon = document.createElement('img')
+    previewIcon.setAttribute('src',"icons/preview.svg")
+    box2.appendChild(previewIcon)
+
+    const manageIcon = document.createElement('img')
+    manageIcon.setAttribute('src',"icons/manage course.svg")
+    box2.appendChild(manageIcon)
+
+    const submissionIcon = document.createElement('img')
+    submissionIcon.setAttribute('src',"icons/grade submissions.svg")
+    box2.appendChild(submissionIcon)
+
+    const reportIcon = document.createElement('img')
+    reportIcon.setAttribute('src',"icons/reports.svg")
+    box2.appendChild(reportIcon)
+
+    // box2.innerHTML = `<img src="icons/preview.svg" alt="preview" />
+    // <img src="icons/manage course.svg" alt="manage course" />
+    // <img src="icons/grade submissions.svg" alt="" />
+    // <img src="icons/reports.svg" alt="reports" />`
     card.appendChild(box2)
 }
 
