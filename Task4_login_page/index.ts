@@ -1,6 +1,7 @@
+// import cardData from './card_data.json';
+// console.log(cardData)
 
-
-interface data {
+interface card {
     expire: boolean;
     image: string;
     title: string;
@@ -17,7 +18,7 @@ interface data {
     unavailable: boolean;
 }
 
-const cardData : data[] = [
+const cardData : card[] = [
     {
         "expire":false,
         "image": "images/imageMask-1.svg",
@@ -85,7 +86,7 @@ const cardData : data[] = [
 ]
 
 
-const cardContainer = document.querySelector('.cardContainer')
+const cardContainer : any  = document.querySelector('.cardContainer')
 
 for(let i = 0; i<cardData.length;i++){
     const card = document.createElement('div')
@@ -202,11 +203,226 @@ for(let i = 0; i<cardData.length;i++){
     const reportIcon = document.createElement('img')
     reportIcon.setAttribute('src',"icons/reports.svg")
     box2.appendChild(reportIcon)
-
-    // box2.innerHTML = `<img src="icons/preview.svg" alt="preview" />
-    // <img src="icons/manage course.svg" alt="manage course" />
-    // <img src="icons/grade submissions.svg" alt="" />
-    // <img src="icons/reports.svg" alt="reports" />`
     card.appendChild(box2)
 }
 
+// ------------------for alert hover -----------------------------------
+
+interface alert{
+    title:string;
+    class:any;
+    course:any;
+    date:string;
+}
+
+const alertData : alert[] = [
+    {
+        "title": "License for Introduction to Algebra has been assigned to your school",
+        "class": null,
+        "course": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "title": "Lesson 3 Practice Worksheet overdue for Amy Santiago",
+        "class": null,
+        "course": "Advanced Mathematics",
+        "date": "15-Sep-2018 at 05:21 pm"
+    },
+    {
+        "title": "23 new students created",
+        "class": null,
+        "course": null,
+        "date": "14-Sep-2018 at 01:21 pm"
+    },
+    {
+        "title": "15 submissions ready for evaluation",
+        "class": "Basics of Algebra",
+        "course": null,
+        "date": "13-Sep-2018 at 01:15 pm"
+    },
+    {
+        "title": "License for Basic Concepts in Geometry has been assigned to your...",
+        "class": null,
+        "course": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "title": "Lesson 3 Practice Worksheet overdue for Amy Santiago",
+        "class": null,
+        "course": "Advanced Mathematics",
+        "date": "15-Sep-2018 at 05:21 pm"
+    }
+]
+
+
+const alertDiv : any = document.querySelector(".alertDiv");
+
+for (let i = 0; i < alertData.length; i++){
+    const alertMessage = document.createElement('div');
+    alertMessage.classList.add('alertMessage', 'incompleted');
+    alertDiv.appendChild(alertMessage);
+
+    const alertHead = document.createElement('div');
+    alertHead.classList.add('alertHead');
+    const title = document.createElement('h5');
+    title.innerHTML = alertData[i].title;
+    const status = document.createElement('span');
+    status.classList.add('material-symbols-outlined', 'md-18');
+    status.innerText = 'do_not_disturb_on';
+    alertHead.appendChild(title);
+    alertHead.appendChild(status);
+    alertMessage.appendChild(alertHead);
+
+    if(alertData[i].class!=null){
+        const alertTopic = document.createElement('div');
+        alertTopic.classList.add('alertTopic');
+        alertTopic.innerHTML = `Class:<span>${alertData[i].class}</span>`;
+        alertMessage.appendChild(alertTopic);
+    }else if(alertData[i].course!=null){
+        const alertTopic = document.createElement('div');
+        alertTopic.classList.add('alertTopic');
+        alertTopic.innerHTML = `Course:<span>${alertData[i].course}</span>`;
+        alertMessage.appendChild(alertTopic);
+    }
+    
+
+    const alertDate = document.createElement('div');
+    alertDate.classList.add('alertDate');
+    alertDate.innerText = alertData[i].date;
+    alertMessage.appendChild(alertDate);
+
+}
+
+const alertButton = document.createElement('button');
+alertButton.classList.add('alertButton');
+alertButton.innerText = 'SHOW ALL';
+alertDiv.appendChild(alertButton);
+
+// const alertClick:any = document.querySelectorAll('alertMessage');
+// alertClick.addEventListener('click', () => {
+//     alertClick.classList.remove('incompleted');
+//     alertClick.classList.add('completed');
+// })
+
+
+// ------------------Announcement Hover------------------------
+
+interface announcement{
+    name:string;
+    title:string;
+    attachements:any;
+    course:any;
+    class:any;
+    date:string;
+}
+
+const announcementData: announcement[] = [
+    {
+        "name":" Wilson Kumar",
+        "title": "No classes will be held on 21st Nov",
+        "attachements": "2 files are attached",
+        "course": null,
+        "class":null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name":" Samson White",
+        "title": "Guest lecture on Geometry on 20th September",
+        "attachements": "2 files are attached",
+        "course": null,
+        "class":null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name":" Wilson Kumar",
+        "title": "Additional course materials available on request",
+        "attachements": null,
+        "class":null,
+        "course": "Course: Mathematics 101",
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name":" Wilson Kumar",
+        "title": "No classes will be held on 25th Dec",
+        "attachements": null,
+        "course": null,
+        "class":null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name":" Wilson Kumar",
+        "title": "Additional course materials available on request",
+        "attachements": null,
+        "class":null,
+        "course": "Course: Mathematics 101",
+        "date": "15-Sep-2018 at 07:21 pm"
+    }
+]
+
+const announcementDiv : any = document.querySelector(".announcementDiv");
+
+for (let i = 0; i < announcementData.length; i++){
+    const announcementMessage = document.createElement('div');
+    announcementMessage.classList.add('announcementMessage', 'incompleted');
+    announcementDiv.appendChild(announcementMessage);
+
+    const announcementName = document.createElement('div');
+    announcementName.classList.add('announcementName');
+    announcementName.innerText='PA:';
+    const name = document.createElement('span');
+    name.innerText=announcementData[i].name;
+    announcementName.appendChild(name);
+    announcementMessage.appendChild(announcementName);
+
+    const announcementHead = document.createElement('div');
+    announcementHead.classList.add('announcementHead');
+    const title = document.createElement('h5');
+    title.innerHTML = announcementData[i].title;
+    const status = document.createElement('span');
+    status.classList.add('material-symbols-outlined', 'md-18');
+    status.innerText = 'do_not_disturb_on';
+    announcementHead.appendChild(title);
+    announcementHead.appendChild(status);
+    announcementMessage.appendChild(announcementHead);
+
+    if(announcementData[i].class!=null){
+        const announcementTopic = document.createElement('div');
+        announcementTopic.classList.add('announcementTopic');
+        announcementTopic.innerHTML = `Class:<span>${announcementData[i].class}</span>`;
+        announcementMessage.appendChild(announcementTopic);
+    }else if(announcementData[i].course!=null){
+        const announcementTopic = document.createElement('div');
+        announcementTopic.classList.add('announcementTopic');
+        announcementTopic.innerHTML = `Course:<span>${announcementData[i].course}</span>`;
+        announcementMessage.appendChild(announcementTopic);
+    }
+    
+    if(announcementData[i].attachements != null){
+        const announcementDate = document.createElement('div');
+        announcementDate.classList.add('announcementDate');
+        const attachFile = document.createElement('span');
+        announcementDate.innerText = announcementData[i].attachements;
+        const date = document.createElement('div');
+        date.innerText = announcementData[i].date;
+        announcementDate.appendChild(date);
+        announcementMessage.appendChild(announcementDate);
+    }else{
+        const announceDate = document.createElement('div');
+        announceDate.classList.add('announceDate');
+        announceDate.innerText = announcementData[i].date;
+        announcementMessage.appendChild(announceDate);
+    }
+}
+
+const announcementButton = document.createElement('div');
+announcementButton.classList.add('announcementButton');
+const showAllBtn = document.createElement('button');
+showAllBtn.innerText = 'SHOW ALL';
+const announceDivider = document.createElement('span');
+announceDivider.classList.add('announceDevider');
+const createNewBtn = document.createElement('button');
+createNewBtn.innerText='CREATE NEW';
+announcementButton.appendChild(showAllBtn);
+announcementButton.appendChild(announceDivider);
+announcementButton.appendChild(createNewBtn);
+announcementDiv.appendChild(announcementButton);

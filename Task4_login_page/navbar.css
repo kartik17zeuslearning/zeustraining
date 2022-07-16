@@ -124,7 +124,195 @@ nav {
   display: block;
 }
 
+/* -----------------Alert Hover =------------------------- */
+.alert{
+  position: relative;
+  height: 100%;
+}
+.alert img{
+  margin-top: 16px;
+}
+.alert:hover .alertDiv{
+  display: block;
+}
+.alert:hover img{
+  opacity: 0.5;
+}
+.alertDiv{
+  position: absolute;
+  display: none;
+  width: 315px;
+  height: 582px;
+  overflow: auto;
+  top: 56px;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b9b3b3; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a8383; 
+}
+.incompleted{
+  background-color: #FFFFEE;
+}
+.completed{
+  background-color: white;
+}
+.alertDiv .alertMessage{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #dfd4d4;
+}
+.alertMessage .alertHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.alertMessage .alertTopic{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #6E6E6E;
+}
+.alertTopic span{
+  font-weight: bold;
+}
+.alertMessage .alertDate{
+  font-size: 12px;
+  color: #6E6E6E;
+  text-align: right;
+  margin-top: 8px;
+  font-weight: 700;
+}
+.alertDiv .alertButton{
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1F7A54;
+  text-align: center;
+  background-color: white;
+  height: 48px;
+  border: none;
+  box-shadow: 0px 1px 12px #0000003d;
+  border-radius: 0px 0px 2px 2px;
+  cursor: pointer;
+}
+.material-symbols-outlined.md-18{
+  color: #1F7A54;
+  font-size: 18px;
+}
 
+/* ----------------Announcement Hover----------------------- */
+
+.announcement{
+  position: relative;
+  height: 100%;
+}
+.announcement img{
+  margin-top: 16px;
+}
+.announcement:hover .announcementDiv{
+  display: block;
+}
+.announcement:hover img{
+  opacity: 0.5;
+}
+.announcementDiv{
+  position: absolute;
+  display: none;
+  width: 315px;
+  height: 582px;
+  overflow: auto;
+  top: 56px;
+  right: 0;
+  z-index: 1;
+}
+.announcementDiv .announcementMessage{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #dfd4d4;
+}
+.announcementMessage .announcementName{
+  font-size: 12px;
+  color: #6E6E6E;
+}
+.announcementName span{
+  font-weight: bold;
+}
+.announcementMessage .announcementHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.announcementMessage .announcementTopic{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #6E6E6E;
+  font-weight: 700;
+}
+.announcementMessage .announcementDate{
+  font-size: 12px;
+  color: #6E6E6E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-weight: 700;
+}
+.announceDate{
+  font-size: 12px;
+  color: #6E6E6E;
+  font-weight: 700;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.announcementDiv .announcementButton{
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  height: 48px;
+  border: none;
+  box-shadow: 0px 1px 6px #0000003d;
+  border-radius: 0px 0px 2px 2px;
+  display: flex;
+  flex-direction: row;
+}
+.announcement button{
+  width: 50%;
+  background-color: white;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F7A54;
+  cursor: pointer;
+}
+.announcement .announceDevider{
+  border: 0.2px solid #dbd4d4;
+  margin: 8px 0;
+}
+.material-symbols-outlined.md-10{
+  color: #1F7A54;
+  font-size: 18px;
+}
+.material-symbols-outlined.md-12{
+  font-size: 12px;
+}
 
 /* ------------------------------------------------ */
 @media (max-width: 1440px) {

@@ -1,3 +1,5 @@
+// import cardData from './card_data.json';
+// console.log(cardData)
 var cardData = [
     {
         "expire": false,
@@ -155,9 +157,184 @@ for (var i = 0; i < cardData.length; i++) {
     var reportIcon = document.createElement('img');
     reportIcon.setAttribute('src', "icons/reports.svg");
     box2.appendChild(reportIcon);
-    // box2.innerHTML = `<img src="icons/preview.svg" alt="preview" />
-    // <img src="icons/manage course.svg" alt="manage course" />
-    // <img src="icons/grade submissions.svg" alt="" />
-    // <img src="icons/reports.svg" alt="reports" />`
     card.appendChild(box2);
 }
+var alertData = [
+    {
+        "title": "License for Introduction to Algebra has been assigned to your school",
+        "class": null,
+        "course": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "title": "Lesson 3 Practice Worksheet overdue for Amy Santiago",
+        "class": null,
+        "course": "Advanced Mathematics",
+        "date": "15-Sep-2018 at 05:21 pm"
+    },
+    {
+        "title": "23 new students created",
+        "class": null,
+        "course": null,
+        "date": "14-Sep-2018 at 01:21 pm"
+    },
+    {
+        "title": "15 submissions ready for evaluation",
+        "class": "Basics of Algebra",
+        "course": null,
+        "date": "13-Sep-2018 at 01:15 pm"
+    },
+    {
+        "title": "License for Basic Concepts in Geometry has been assigned to your...",
+        "class": null,
+        "course": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "title": "Lesson 3 Practice Worksheet overdue for Amy Santiago",
+        "class": null,
+        "course": "Advanced Mathematics",
+        "date": "15-Sep-2018 at 05:21 pm"
+    }
+];
+var alertDiv = document.querySelector(".alertDiv");
+for (var i = 0; i < alertData.length; i++) {
+    var alertMessage = document.createElement('div');
+    alertMessage.classList.add('alertMessage', 'incompleted');
+    alertDiv.appendChild(alertMessage);
+    var alertHead = document.createElement('div');
+    alertHead.classList.add('alertHead');
+    var title = document.createElement('h5');
+    title.innerHTML = alertData[i].title;
+    var status_1 = document.createElement('span');
+    status_1.classList.add('material-symbols-outlined', 'md-18');
+    status_1.innerText = 'do_not_disturb_on';
+    alertHead.appendChild(title);
+    alertHead.appendChild(status_1);
+    alertMessage.appendChild(alertHead);
+    if (alertData[i]["class"] != null) {
+        var alertTopic = document.createElement('div');
+        alertTopic.classList.add('alertTopic');
+        alertTopic.innerHTML = "Class:<span>".concat(alertData[i]["class"], "</span>");
+        alertMessage.appendChild(alertTopic);
+    }
+    else if (alertData[i].course != null) {
+        var alertTopic = document.createElement('div');
+        alertTopic.classList.add('alertTopic');
+        alertTopic.innerHTML = "Course:<span>".concat(alertData[i].course, "</span>");
+        alertMessage.appendChild(alertTopic);
+    }
+    var alertDate = document.createElement('div');
+    alertDate.classList.add('alertDate');
+    alertDate.innerText = alertData[i].date;
+    alertMessage.appendChild(alertDate);
+}
+var alertButton = document.createElement('button');
+alertButton.classList.add('alertButton');
+alertButton.innerText = 'SHOW ALL';
+alertDiv.appendChild(alertButton);
+var announcementData = [
+    {
+        "name": " Wilson Kumar",
+        "title": "No classes will be held on 21st Nov",
+        "attachements": "2 files are attached",
+        "course": null,
+        "class": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name": " Samson White",
+        "title": "Guest lecture on Geometry on 20th September",
+        "attachements": "2 files are attached",
+        "course": null,
+        "class": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name": " Wilson Kumar",
+        "title": "Additional course materials available on request",
+        "attachements": null,
+        "class": null,
+        "course": "Course: Mathematics 101",
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name": " Wilson Kumar",
+        "title": "No classes will be held on 25th Dec",
+        "attachements": null,
+        "course": null,
+        "class": null,
+        "date": "15-Sep-2018 at 07:21 pm"
+    },
+    {
+        "name": " Wilson Kumar",
+        "title": "Additional course materials available on request",
+        "attachements": null,
+        "class": null,
+        "course": "Course: Mathematics 101",
+        "date": "15-Sep-2018 at 07:21 pm"
+    }
+];
+var announcementDiv = document.querySelector(".announcementDiv");
+for (var i = 0; i < announcementData.length; i++) {
+    var announcementMessage = document.createElement('div');
+    announcementMessage.classList.add('announcementMessage', 'incompleted');
+    announcementDiv.appendChild(announcementMessage);
+    var announcementName = document.createElement('div');
+    announcementName.classList.add('announcementName');
+    announcementName.innerText = 'PA:';
+    var name_1 = document.createElement('span');
+    name_1.innerText = announcementData[i].name;
+    announcementName.appendChild(name_1);
+    announcementMessage.appendChild(announcementName);
+    var announcementHead = document.createElement('div');
+    announcementHead.classList.add('announcementHead');
+    var title = document.createElement('h5');
+    title.innerHTML = announcementData[i].title;
+    var status_2 = document.createElement('span');
+    status_2.classList.add('material-symbols-outlined', 'md-18');
+    status_2.innerText = 'do_not_disturb_on';
+    announcementHead.appendChild(title);
+    announcementHead.appendChild(status_2);
+    announcementMessage.appendChild(announcementHead);
+    if (announcementData[i]["class"] != null) {
+        var announcementTopic = document.createElement('div');
+        announcementTopic.classList.add('announcementTopic');
+        announcementTopic.innerHTML = "Class:<span>".concat(announcementData[i]["class"], "</span>");
+        announcementMessage.appendChild(announcementTopic);
+    }
+    else if (announcementData[i].course != null) {
+        var announcementTopic = document.createElement('div');
+        announcementTopic.classList.add('announcementTopic');
+        announcementTopic.innerHTML = "Course:<span>".concat(announcementData[i].course, "</span>");
+        announcementMessage.appendChild(announcementTopic);
+    }
+    if (announcementData[i].attachements != null) {
+        var announcementDate = document.createElement('div');
+        announcementDate.classList.add('announcementDate');
+        var attachFile = document.createElement('span');
+        announcementDate.innerText = announcementData[i].attachements;
+        var date = document.createElement('div');
+        date.innerText = announcementData[i].date;
+        announcementDate.appendChild(date);
+        announcementMessage.appendChild(announcementDate);
+    }
+    else {
+        var announceDate = document.createElement('div');
+        announceDate.classList.add('announceDate');
+        announceDate.innerText = announcementData[i].date;
+        announcementMessage.appendChild(announceDate);
+    }
+}
+var announcementButton = document.createElement('div');
+announcementButton.classList.add('announcementButton');
+var showAllBtn = document.createElement('button');
+showAllBtn.innerText = 'SHOW ALL';
+var announceDivider = document.createElement('span');
+announceDivider.classList.add('announceDevider');
+var createNewBtn = document.createElement('button');
+createNewBtn.innerText = 'CREATE NEW';
+announcementButton.appendChild(showAllBtn);
+announcementButton.appendChild(announceDivider);
+announcementButton.appendChild(createNewBtn);
+announcementDiv.appendChild(announcementButton);
