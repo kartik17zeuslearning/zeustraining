@@ -255,7 +255,7 @@ var announcementData = [
         "title": "Additional course materials available on request",
         "attachements": null,
         "class": null,
-        "course": "Course: Mathematics 101",
+        "course": " Mathematics 101",
         "date": "15-Sep-2018 at 07:21 pm"
     },
     {
@@ -271,7 +271,7 @@ var announcementData = [
         "title": "Additional course materials available on request",
         "attachements": null,
         "class": null,
-        "course": "Course: Mathematics 101",
+        "course": " Mathematics 101",
         "date": "15-Sep-2018 at 07:21 pm"
     }
 ];
@@ -313,6 +313,9 @@ for (var i = 0; i < announcementData.length; i++) {
         var announcementDate = document.createElement('div');
         announcementDate.classList.add('announcementDate');
         var attachFile = document.createElement('span');
+        attachFile.classList.add('material-symbols-outlined', 'md-12');
+        attachFile.innerText = "attach_file";
+        announcementDate.appendChild(attachFile);
         announcementDate.innerText = announcementData[i].attachements;
         var date = document.createElement('div');
         date.innerText = announcementData[i].date;

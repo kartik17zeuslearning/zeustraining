@@ -298,11 +298,6 @@ alertButton.classList.add('alertButton');
 alertButton.innerText = 'SHOW ALL';
 alertDiv.appendChild(alertButton);
 
-// const alertClick:any = document.querySelectorAll('alertMessage');
-// alertClick.addEventListener('click', () => {
-//     alertClick.classList.remove('incompleted');
-//     alertClick.classList.add('completed');
-// })
 
 
 // ------------------Announcement Hover------------------------
@@ -338,7 +333,7 @@ const announcementData: announcement[] = [
         "title": "Additional course materials available on request",
         "attachements": null,
         "class":null,
-        "course": "Course: Mathematics 101",
+        "course": " Mathematics 101",
         "date": "15-Sep-2018 at 07:21 pm"
     },
     {
@@ -354,7 +349,7 @@ const announcementData: announcement[] = [
         "title": "Additional course materials available on request",
         "attachements": null,
         "class":null,
-        "course": "Course: Mathematics 101",
+        "course": " Mathematics 101",
         "date": "15-Sep-2018 at 07:21 pm"
     }
 ]
@@ -401,6 +396,9 @@ for (let i = 0; i < announcementData.length; i++){
         const announcementDate = document.createElement('div');
         announcementDate.classList.add('announcementDate');
         const attachFile = document.createElement('span');
+        attachFile.classList.add('material-symbols-outlined', 'md-12');
+        attachFile.innerText = "attach_file";
+        announcementDate.appendChild(attachFile);
         announcementDate.innerText = announcementData[i].attachements;
         const date = document.createElement('div');
         date.innerText = announcementData[i].date;
