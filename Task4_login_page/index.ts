@@ -395,11 +395,9 @@ for (let i = 0; i < announcementData.length; i++){
     if(announcementData[i].attachements != null){
         const announcementDate = document.createElement('div');
         announcementDate.classList.add('announcementDate');
-        const attachFile = document.createElement('span');
-        attachFile.classList.add('material-symbols-outlined', 'md-12');
-        attachFile.innerText = "attach_file";
+        const attachFile = document.createElement('div');
+        attachFile.innerHTML = `<span class="material-symbols-outlined md-12">attach_file</span>${announcementData[i].attachements}`;
         announcementDate.appendChild(attachFile);
-        announcementDate.innerText = announcementData[i].attachements;
         const date = document.createElement('div');
         date.innerText = announcementData[i].date;
         announcementDate.appendChild(date);

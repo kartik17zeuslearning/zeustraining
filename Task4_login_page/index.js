@@ -312,11 +312,14 @@ for (var i = 0; i < announcementData.length; i++) {
     if (announcementData[i].attachements != null) {
         var announcementDate = document.createElement('div');
         announcementDate.classList.add('announcementDate');
-        var attachFile = document.createElement('span');
-        attachFile.classList.add('material-symbols-outlined', 'md-12');
-        attachFile.innerText = "attach_file";
+        var attachFile = document.createElement('div');
+        attachFile.innerHTML = "<span class=\"material-symbols-outlined md-12\">attach_file</span>".concat(announcementData[i].attachements);
         announcementDate.appendChild(attachFile);
-        announcementDate.innerText = announcementData[i].attachements;
+        // const attachFile = document.createElement('span');
+        // attachFile.classList.add('material-symbols-outlined', 'md-12');
+        // attachFile.innerText = "attach_file";
+        // announcementDate.appendChild(attachFile);
+        // announcementDate.innerText = announcementData[i].attachements;
         var date = document.createElement('div');
         date.innerText = announcementData[i].date;
         announcementDate.appendChild(date);
