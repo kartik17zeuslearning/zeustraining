@@ -222,11 +222,11 @@ function printAlertData() {
                     alertClick = document.querySelectorAll(".alertMessage");
                     alertClick.forEach(function (item) {
                         item.addEventListener("click", function () {
-                            console.log("clicked");
                             item.classList.remove("incompleted");
                             item.classList.add("completed");
-                            item.querySelector(".alertMessage .material-symbols-outlined").innerText =
-                                "check_circle";
+                            var icon = item.querySelector('.alertMessage .material-symbols-outlined');
+                            icon.classList.remove('material-symbols-outlined');
+                            icon.innerHTML = "<i class=\"fa-solid fa-circle-check\"></i>";
                         });
                     });
                     return [2 /*return*/];
@@ -327,10 +327,11 @@ function printAnnouncementData() {
                     announcementClick = document.querySelectorAll(".announcementMessage");
                     announcementClick.forEach(function (item) {
                         item.addEventListener("click", function () {
-                            console.log("clicked");
                             item.classList.remove("incompleted");
                             item.classList.add("completed");
-                            item.querySelector(".announcementMessage .material-symbols-outlined").innerText = "check_circle";
+                            var icon = item.querySelector('.announcementMessage .md-18');
+                            icon.classList.remove('material-symbols-outlined', 'md-18');
+                            icon.innerHTML = "<i class=\"fa-solid fa-circle-check fa-lg\"></i>";
                         });
                     });
                     return [2 /*return*/];

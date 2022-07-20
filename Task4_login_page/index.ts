@@ -217,11 +217,11 @@ async function printAlertData() {
 
   alertClick.forEach((item: any) => {
     item.addEventListener("click", () => {
-      console.log("clicked");
       item.classList.remove("incompleted");
       item.classList.add("completed");
-      item.querySelector(".alertMessage .material-symbols-outlined").innerText =
-        "check_circle";
+      var icon = item.querySelector('.alertMessage .material-symbols-outlined');
+      icon.classList.remove('material-symbols-outlined');
+      icon.innerHTML=`<i class="fa-solid fa-circle-check"></i>`;
     });
   });
 }
@@ -321,12 +321,11 @@ async function printAnnouncementData() {
 
   announcementClick.forEach((item: any) => {
     item.addEventListener("click", () => {
-      console.log("clicked");
       item.classList.remove("incompleted");
       item.classList.add("completed");
-      item.querySelector(
-        ".announcementMessage .material-symbols-outlined"
-      ).innerText = "check_circle";
+      var icon = item.querySelector('.announcementMessage .md-18');
+      icon.classList.remove('material-symbols-outlined','md-18');
+      icon.innerHTML=`<i class="fa-solid fa-circle-check fa-lg"></i>`;
     });
   });
 }
