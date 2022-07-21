@@ -197,7 +197,7 @@ nav {
   bottom: 0;
   width: 100%;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   color: #1F7A54;
   text-align: center;
   background-color: white;
@@ -305,7 +305,7 @@ nav {
   border: none;
   text-align: center;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 800;
   color: #1F7A54;
   cursor: pointer;
 }

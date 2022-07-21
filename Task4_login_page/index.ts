@@ -220,7 +220,7 @@ async function printAlertData() {
       item.classList.remove("incompleted");
       item.classList.add("completed");
       var icon = item.querySelector('.alertMessage .material-symbols-outlined');
-      icon.classList.remove('material-symbols-outlined');
+      icon.classList.remove('material-symbols-outlined','md-18');
       icon.innerHTML=`<i class="fa-solid fa-circle-check"></i>`;
     });
   });
