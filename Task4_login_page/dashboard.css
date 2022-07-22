@@ -269,7 +269,10 @@ footer{
     bottom: 0;
     color: #616161;
 }
-
+.footerDevider{
+    margin: 0 8px;
+    opacity: 0.5;
+}
 footer div{
     font-size: 12px;
     gap: 15px;
