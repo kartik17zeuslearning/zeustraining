@@ -228,7 +228,7 @@ async function printAlertData() {
 
 printAlertData();
 
-// ------------------Announcement Hover------------------------
+// ------------------Announcement Hover----------------------
 
 async function importAnnouncementData() {
   const response = await fetch("./announcement_data.json");
